@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'schedules.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'users',
+        'USER': 'steven',
+        'HOST': 'localhost',
+        'PORT': '',
+        'TEST': {
+            'NAME': 'users_test',
+        },
     }
 }
 
